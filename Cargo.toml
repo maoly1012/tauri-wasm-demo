@@ -1,0 +1,2 @@
+[workspace]
+members = ["plugin", "pure-rust","tauri-main/src-tauri"]

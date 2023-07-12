@@ -1982,6 +1982,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "plugin"
+version = "1.0.0"
+dependencies = [
+ "wasmedge-bindgen",
+ "wasmedge-bindgen-macro",
+]
+
+[[package]]
 name = "png"
 version = "0.17.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2063,6 +2071,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "78803b62cbf1f46fde80d7c0e803111524b9877184cfe7c3033659490ac7a7da"
 dependencies = [
  "unicode-ident",
+]
+
+[[package]]
+name = "pure-rust"
+version = "0.1.0"
+dependencies = [
+ "wasmedge-sdk",
 ]
 
 [[package]]
@@ -2368,9 +2383,9 @@ dependencies = [
 
 [[package]]
 name = "serde_json"
-version = "1.0.100"
+version = "1.0.102"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0f1e14e89be7aa4c4b78bdbdc9eb5bf8517829a600ae8eaa39a6e1d960b5185c"
+checksum = "b5062a995d481b2308b6064e9af76011f2921c35f97b0468811ed9f6cd91dfed"
 dependencies = [
  "itoa 1.0.8",
  "ryu",
@@ -2704,9 +2719,9 @@ dependencies = [
 
 [[package]]
 name = "target-lexicon"
-version = "0.12.8"
+version = "0.12.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1b1c7f239eb94671427157bd93b3694320f3668d4e1eff08c7285366fd777fac"
+checksum = "df8e77cb757a61f51b947ec4a7e3646efd825b73561db1c232a8ccb639e611a0"
 
 [[package]]
 name = "tauri"
@@ -2810,6 +2825,18 @@ dependencies = [
  "syn 1.0.109",
  "tauri-codegen",
  "tauri-utils",
+]
+
+[[package]]
+name = "tauri-main"
+version = "0.0.0"
+dependencies = [
+ "anyhow",
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "wasmedge-sdk",
 ]
 
 [[package]]
@@ -3318,15 +3345,20 @@ dependencies = [
 ]
 
 [[package]]
-name = "wasm-test"
-version = "0.0.0"
+name = "wasmedge-bindgen"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "363e00c6f7c2fd162c36a97b3f352dd0ed690cde5c0d0a6d50524ef9c0fa7acd"
+
+[[package]]
+name = "wasmedge-bindgen-macro"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a9fe812750bd02aac1b3b32f90f70442b58e802cb2b09454726619af359fdf33"
 dependencies = [
- "anyhow",
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "wasmedge-sdk",
+ "proc-macro2",
+ "quote",
+ "syn 1.0.109",
 ]
 
 [[package]]

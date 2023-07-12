@@ -10,8 +10,7 @@ use wasmedge_sdk::{
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
 fn greet(name: &str) -> String {
-    let wasm_file =
-        Path::new("D:\\project\\edge-plugin\\target\\wasm32-wasi\\release\\edge_plugin.wasm");
+    let wasm_file = Path::new("..\\..\\target\\wasm32-wasi\\debug\\plugin.wasm");
     let module = Module::from_file(None, wasm_file).unwrap();
     let config = ConfigBuilder::new(CommonConfigOptions::default())
         .with_host_registration_config(HostRegistrationConfigOptions::default().wasi(true))

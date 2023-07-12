@@ -1,0 +1,24 @@
+[package]
+authors = ["you"]
+description = "A Tauri App"
+edition = "2021"
+license = ""
+name = "tauri-main"
+repository = ""
+version = "0.0.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = {version = "1.4", features = [] }
+
+[dependencies]
+anyhow = "1"
+serde = {version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tauri = {version = "1.4", features = ["shell-open"] }
+wasmedge-sdk = "0.9"
+[features]
+# this feature is used for production builds or when `devPath` points to the filesystem
+# DO NOT REMOVE!!
+custom-protocol = ["tauri/custom-protocol"]
